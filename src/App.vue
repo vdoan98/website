@@ -1,16 +1,15 @@
 <template>
   <div id="app">
-    <Intro/>
+    <router-view/>
   </div>
 </template>
 
 <script>
-import Intro from './views/Intro.vue'
+
 
 export default {
   name: 'App',
   components: {
-    Intro
   }
 }
 </script>
