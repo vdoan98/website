@@ -1,17 +1,12 @@
 <template>
     <div class='navigation'>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-                <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-                <a class="nav-item nav-link" href="#">Projects</a>
-            </div>
-        </div>
-    </nav>
+        <b-navbar>
+            <b-navbar-nav>
+                <b-nav-item>Home</b-nav-item>
+                <b-nav-item>Resume</b-nav-item>
+                <b-nav-item>Project</b-nav-item>
+            </b-navbar-nav>
+        </b-navbar>
     </div>
 </template>
 
@@ -22,5 +17,6 @@ export default {};
 <style>
 .navigation{
     margin-left: ($spacer * .25) !important;
+    align-items: left;
 }
 </style>

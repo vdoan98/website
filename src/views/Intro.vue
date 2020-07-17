@@ -1,15 +1,17 @@
 <template>
   <div>
+    <Nav class="navbar" :class="{'hidden-navbar': showNavbar}"/>
     <div class="container">
       <video loop muted autoplay id='intro-video'>
         <source src="@/assets/intro.mp4" type="video/mp4">
       </video>
       <div class="overlay css-typing">
-        <h1>HELLO!</h1>
+        <h1>HELLO! I'M VY.</h1>
         <h4>Scroll down or view <router-link to="resume" style="color:#ca9cf0;">my resume</router-link></h4>
       </div>
     </div>
     <Biography/>
+    <Story/>
   </div>
 </template>
 
@@ -17,6 +19,8 @@
 import Vue from 'vue'
 import { BootstrapVue, BootstrapVueIcons } from 'bootstrap-vue'
 import Biography from '@/components/Biography.vue';
+import Story from '@/components/Story.vue';
+import Nav from '@/components/Nav.vue';
 
 Vue.use(BootstrapVue)
 Vue.use(BootstrapVueIcons)
@@ -24,7 +28,38 @@ Vue.use(BootstrapVueIcons)
 export default {
   name: 'Intro',
   components: {
-    Biography
+    Biography,
+    Story,
+    Nav
+  },
+  data(){
+    return{
+      showNavbar: true,
+      lastScrollPosition: 0
+    }
+  },
+  mounted(){
+    window.addEventListenter('scroll', this.onScroll)
+  },
+  methods: {
+    onScroll(){
+      // Get the current scroll position 
+      const currentScrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+      // Because of momentum scroling on mobiles, we shouldn't continue if it is less than 0
+      if (currentScrollPosition < 0){
+        return 
+      }
+      // Stop executing this function if the difference between
+      // current scroll position and last scroll position is less than some offset
+      if (Math.abs(currentScrollPosition - this.lastScrollPosition) < 60) {
+        return
+      }
+      // Here we determine whether we need to show or hide the navbar
+      this.showNavbar = currentScrollPosition < this.lastScrollPosition
+      // Set the current scroll position as the last scroll position
+      this.lastScrollPosition = currentScrollPosition
+    }
+    
   }
 }
 </script>
@@ -64,6 +99,11 @@ html, body {
   
 }
 
+.navbar.hidden-navbar {
+  box-shadow: none;
+  transform: translate3d(0, -100%, 0);
+}
+
 
 .css-typing h1, h4{
   border-right: .15em solid orange;
@@ -75,7 +115,7 @@ html, body {
 }
 .css-typing h1 {
   font-size: 50px;
-  width: 4.5em;
+  width: 9em;
   -webkit-animation: type 2s steps(40, end);
   animation: type 2s steps(40, end);
   -webkit-animation-fill-mode: forwards;
