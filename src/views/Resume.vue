@@ -30,13 +30,13 @@
             </div>
             <h5>Projects</h5>
             <div>
-                <h7>FYYUR WEB APPLICATION</h7>
+                <h6>FYYUR WEB APPLICATION</h6>
                 <ul>
                     <li>Implemented Postgres database for web application using Flask-SQLAlchemy</li>
                     <li>Performed CRUD operations on the database and implemented functions that interact with the database</li>
                 </ul>
 
-                <h7>TRIVIA WEB APPLICATION</h7>
+                <h6>TRIVIA WEB APPLICATION</h6>
                 <ul>
                     <li>Implemented API endpoints and functions for web application following test-driven development standard</li>
                     <li>Wrote API and project documentation on API purpose and instruction for sending requests and parsing responses</li> 

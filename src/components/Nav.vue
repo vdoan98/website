@@ -15,8 +15,8 @@ export default {};
 </script>
 
 <style>
-.navigation{
-    margin-left: ($spacer * .25) !important;
-    align-items: left;
+body{
+ margin: 0px;
 }
+
 </style>

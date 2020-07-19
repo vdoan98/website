@@ -1,6 +1,5 @@
 <template>
     <div>
-        <h3> Short Descriptions </h3>
         <h5><a :href="project.link">{{project.title}}</a></h5>
         <img :src="project.image">
         <p>{{project.description}}</p>
@@ -34,9 +33,7 @@
 
 export default{
     name: "Project",
-    props: {
-        project: JSON
-    }
+    props: ['project']
 }
 </script>
 

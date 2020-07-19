@@ -4,8 +4,8 @@
         <div>
             <h1>PROJECTS</h1>
             <ul>
-                <li>
-                    <Project :parentData="this.project"/>
+                <li v-for="project in projects" :key="project.title">
+                    <Project v-bind:project="project"/>
                 </li>
             </ul>
         </div>
@@ -23,7 +23,8 @@ export default {
         Project
     },
     mounted(){
-        this.projects = this.getProjectDetails()
+        this.getProjectDetails()
+        console.log(this.projects)
     },
     data: function(){
         return {
@@ -31,7 +32,7 @@ export default {
                 {
                     'title': 'Fyyur Web Application',
                     'image': '#',
-                    'link': '#',
+                    'link': 'https://github.com/vdoan98/fyyur/tree/master/projects/01_fyyur/starter_code',
                     'description': 'Fyyur is a web application for artists and venues to advertise and book events.',
                     'tech_stack': [
                         'Python',
@@ -42,7 +43,7 @@ export default {
                 {
                     'title': 'Trivia API',
                     'image': '#',
-                    'link': '#',
+                    'link': 'https://github.com/vdoan98/fyyur/tree/master/projects/02_trivia_api/starter',
                     'description': 'Trivia API is a web application for playing and creating trivia quizzes.',
                     'tech_stack': [
                         'Python',
@@ -82,6 +83,7 @@ export default {
 
                 this.projects.push(project)
             }
+            //console.log(this.projects)
         },
         filter_by_stack: function(stack_name){
             var i
@@ -96,3 +98,9 @@ export default {
     }
 }
 </script>
+
+<style scoped>
+li{
+    list-style: none;
+}
+</style>
