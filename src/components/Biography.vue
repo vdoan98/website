@@ -6,11 +6,11 @@
             <h5>Full Stack Developer</h5>
         </b-row>
         <b-row>
-            <b-col id="profile">
+            <b-col class="profile">
                 <img style="height: 240px; width: 240px;" src="@/assets/profile-pic.jpg" class="rounded-circle"  alt="Cinque Terre">
             </b-col>
-            <b-col>
-                <p></p>
+            <b-col class="">
+                <p>I am passionate about beautiful user friendly web application. My philosophy is based on pleasure. I want to create web application that are not only useful but pleasurable to use. </p>
             </b-col>
         </b-row>
     </b-container>
@@ -55,5 +55,9 @@ h5 {
 }
 #profile{
     margin: 50px;
+}
+
+div {
+  word-wrap: break-word;
 }
 </style>

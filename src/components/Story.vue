@@ -1,5 +1,5 @@
 <template>
-    <div class="container" v-show="show" lazy>
+    <div class="container" lazy>
         <div id="change-text" ></div><div id="cursor"></div>
         <h2> </h2>
 
@@ -7,6 +7,9 @@
 </template>
 
 <script>
+// Change text on scroll
+// Change background art on scroll. Ho Chi Minh City fades 
+// while U.S. background emerges 
 export default {
     name: 'Story',
     data: function(){
@@ -20,6 +23,9 @@ export default {
             interval_val: null,
             container: document.querySelector(".container")
         }
+    },
+    mounted(){
+        this.interval_val = setInterval(this.type, 100);
     },
     methods: {
         type: function(){
@@ -64,7 +70,7 @@ export default {
         },
     
         show: function(){
-            this.interval_val = setInterval(this.type, 100);
+            
         }
     }
   

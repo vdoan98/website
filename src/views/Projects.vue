@@ -50,6 +50,17 @@ export default {
                         'JavaScript',
                         'PostgreSQL'
                     ]
+                },
+                {
+                    'title': 'Coffee Shop FullStack',
+                    'image': '#',
+                    'link': 'https://github.com/vdoan98/fyyur/tree/master/projects/03_coffee_shop_full_stack/starter_code',
+                    'description': 'Coffee Shop Full Stack is a web application for barista and manager to create menu and for customer to purchase drinks',
+                    'tech_stack': [
+                        'Python',
+                        'JavaScript',
+                        'PostgreSQL'
+                    ]
                 }
             ],
             projects: []

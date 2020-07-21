@@ -12,6 +12,7 @@
     </div>
     <Biography/>
     <Story/>
+    <Skills/>
   </div>
 </template>
 
@@ -21,6 +22,7 @@ import { BootstrapVue, BootstrapVueIcons } from 'bootstrap-vue'
 import Biography from '@/components/Biography.vue';
 import Story from '@/components/Story.vue';
 import Nav from '@/components/Nav.vue';
+import Skills from '@/components/Skills.vue';
 
 Vue.use(BootstrapVue)
 Vue.use(BootstrapVueIcons)
@@ -30,7 +32,8 @@ export default {
   components: {
     Biography,
     Story,
-    Nav
+    Nav,
+    Skills
   },
   data(){
     return{

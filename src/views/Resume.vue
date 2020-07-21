@@ -3,7 +3,7 @@
     <Nav/>
     <b-container fluid>
         <b-row class="container">
-        <b-col cols="8" id="resume">
+        <b-col class="col-sm" id="resume">
             <h2 class="white-container">Vy Doan</h2>
             <h5 class="white-container">Relevant Experience</h5>
             <div>
@@ -44,9 +44,13 @@
             </div>
             <h3> </h3>
         </b-col>
-        <b-col cols="4">
+        <b-col class="col-sm" id="contact">
             <div>
-                <b-button>Download PDF</b-button>
+                <h5>CONTACT ME</h5>
+                <p><a href="vydoan.work@gmail.com">Email</a></p>
+                <p><a href="https://github.com/vdoan98">Github</a></p>
+                <p><a href="www.linkedin.com/in/vy-doan-b2213811a">LinkedIn</a></p>
+                <b-button style="color:#ca9cf0;"><a href="../../assets/Resume.pdf" download>Download Resume</a></b-button>
             </div>
         </b-col> 
         </b-row>
@@ -85,6 +89,11 @@ export default {
     border-radius: 25px;
 }
 
+#contact{
+    margin: 10px;
+    padding: 10px;
+}
+
 .container{
     display:flex;
 }
@@ -97,5 +106,11 @@ export default {
     background-color: Lavender;
     padding: 10px;
     border-radius: 25px;
+}
+#email:after{
+    content: 'Email';
+}
+#email:hover:after{
+    content:'vydoan.work@gmail.com';
 }
 </style>
