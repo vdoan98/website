@@ -28,18 +28,23 @@
                     <li>Gathered and analyzed data from Twitter; implemented state-of-the-art feature extraction and feature modeling on data</li>
                 </ul>
             </div>
-            <h5>Projects</h5>
+            <h5 class="white-container">Projects</h5>
             <div>
-                <h6>FYYUR WEB APPLICATION</h6>
+                <h6><a href="https://github.com/vdoan98/fyyur/tree/master/projects/01_fyyur/starter_code" class="link-work">FYYUR WEB APPLICATION</a></h6>
                 <ul>
                     <li>Implemented Postgres database for web application using Flask-SQLAlchemy</li>
                     <li>Performed CRUD operations on the database and implemented functions that interact with the database</li>
                 </ul>
 
-                <h6>TRIVIA WEB APPLICATION</h6>
+                <h6><a href="https://github.com/vdoan98/fyyur/tree/master/projects/02_trivia_api/starter" class="link-work">TRIVIA WEB APPLICATION</a></h6>
                 <ul>
                     <li>Implemented API endpoints and functions for web application following test-driven development standard</li>
                     <li>Wrote API and project documentation on API purpose and instruction for sending requests and parsing responses</li> 
+                </ul>
+
+                <h6><a href="https://github.com/vdoan98/fyyur/tree/master/projects/03_coffee_shop_full_stack/starter_code" class="link-work">COFFEE SHOP FULLSTACK APPLICATION</a></h6>
+                <ul>
+                    
                 </ul>
             </div>
             <h3> </h3>
